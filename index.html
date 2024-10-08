@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive CSS Grid Layout</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
+
+</head>
+<body>
+    <header class="header">
+        <h1>Mastering CSS Grid Layout</h1>
+        <p>Your complete guide to creating powerful and responsive web layouts with CSS Grid.</p>
+    </header>
+    
+<nav class="nav">
+    <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#about">Grid Basics</a></li>
+        <li><a href="#concepts">Key Concepts</a></li>
+        <li><a href="#design">Responsive Design</a></li>
+        <li><a href="#mq-and">Benefits</a></li>
+        <li><a href="#mq-or">Further Resources</a></li>
+    </ul>
+</nav>
+    <main class = "container">
+        <section id="intro" class = "intro">
+            <h2>Introduction to CSS Grid</h2>
+            <p>CSS Grid Layout is a powerful tool for creating flexible and responsive web layouts. It allows web developers to design layouts that were previously difficult or impossible to achieve with traditional layout techniques. With CSS Grid, you can create complex web designs with minimal code, giving you more control over how content is displayed on the screen.</p>
+            <img src = "https://i.ytimg.com/vi/68O6eOGAGqA/maxresdefault.jpg" alt = "CSS Grid">
+        </section>
+        <section id="about" class = "about">
+            <h2>CSS Grid Basics</h2>
+            <p>CSS Grid is a two-dimensional layout system, meaning you can control both columns and rows simultaneously. To start using grid, you need to define a grid container and then specify how the items inside the container are positioned in rows and columns.</p>
+            <h3>Example:</h3>
+            <pre><code>
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+    }
+            </code></pre>
+            <p>In this example, the grid container has two columns: the first column takes up 1 fraction of the available space, and the second column takes up 2 fractions.</p>
+       
+        </section>
+        <section id="concepts" class = "concepts">
+            <h2>Key Concepts of CSS Grid</h2>
+        <ul>
+            <li><strong>Grid Container:</strong> The parent element that defines the grid layout. It contains grid items.</li>
+            <li><strong>Grid Item:</strong> The child elements of the grid container. Each grid item is placed within a grid cell or spans multiple cells.</li>
+            <li><strong>Grid Lines:</strong> The dividing lines that define the boundaries of rows and columns.</li>
+            <li><strong>Grid Tracks:</strong> The space between two grid lines (e.g., a row or column).</li>
+            <li><strong>Grid Areas:</strong> A rectangular space that spans one or more grid cells.</li>
+        </ul>
+        </section>
+        <section id="design" class = "design">
+            <h2>What are Media Queries?</h2>
+        <p>Media queries are a key component of responsive web design. They allow you to apply specific styles based on conditions such as the size of the viewport, the device type, or the orientation of the screen. By using media queries, you can ensure your website looks great on any device, from mobile phones to desktop computers.</p>
+        <p>A basic media query might look like this:</p>
+        <pre><code>
+@media (max-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+}
+        </code></pre>
+        </section>
+
+        <section id="mq-and" class = "mq-and">
+            <h2>Using the 'and' Operator in Media Queries</h2>
+            <p>The <strong>'and'</strong> operator in media queries allows you to combine multiple conditions. For example, you can apply styles only when the screen width is below a certain size and the device is in portrait mode.</p>
+            <p>Here’s an example using the <strong>'and'</strong> operator:</p>
+            <pre><code>
+@media (max-width: 768px) 
+   and (orientation: portrait) {
+    body {
+        background-color: pink;
+    }
+}
+            </code></pre>
+            <p>In this case, the styles will only be applied if both conditions are true: the screen width is 768px or less, and the device is in portrait mode.</p>
+        </section>
+        <section id="mq-or" class = "mq-or">
+            <h2>Using the 'or' Operator in Media Queries</h2>
+            <p>The <strong>'or'</strong> operator in media queries is represented by a comma <code>,</code> and allows you to apply styles if either of the specified conditions is met. This is useful when you want to apply the same styles to multiple scenarios, such as screens below a certain size or screens in a particular orientation.</p>
+            <p>Here’s an example using the <strong>'or'</strong> operator:</p>
+            <pre><code>
+@media (max-width: 768px), (orientation: landscape) {
+    /* Styles for screens 768px or less OR devices in landscape mode */
+    body {
+        background-color: lightgreen;
+    }
+}
+            </code></pre>
+            <p>In this case, the background color will change to light green if the screen width is 768px or less <strong>OR</strong> if the device is in landscape mode.</p>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+@media(min-width: 736px) and (max-width: 1024px){
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width: 1025px){
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    nav ul li {
+        width: 100%;
+    }
+    .intro {
+        grid-area: intro;
+    }
+    .about {
+        grid-area: about;
+    }
+    .concepts {
+        grid-area: concepts;
+    }
+    .design{
+        grid-area: design;
+    }
+    .mq-and{
+        grid-area: mq-and;
+    }
+    .mq-or{
+        grid-area: mq-or;
+    }
+
+    .container{
+        display: grid;
+        grid-template-areas: 
+            'about about mq-and'
+            'mq-or concepts mq-and'
+            'design intro intro'
+    }
+}
